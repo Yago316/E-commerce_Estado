@@ -24,7 +24,6 @@ public class UsuarioController {
 		
 		return ResponseEntity.ok(dto);
 	}
-
 	@PostMapping(value = "/login")
 	public ResponseEntity<?> login(@RequestBody LoginDTO dto){
 		boolean login = loginService.autenticarUsuario(dto);
