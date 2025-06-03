@@ -27,11 +27,11 @@ public class UsuarioController {
 
 	@PostMapping(value = "/login")
 	public ResponseEntity<?> login(@RequestBody LoginDTO dto){
-		boolean suamae = loginService.autenticarUsuario(dto);
-		if (suamae) {
+		boolean login = loginService.autenticarUsuario(dto);
+		if (login) {
 			return ResponseEntity.ok("Aeeeee!!!!"); //Se verdadeiro ele retorna essa mensagem de Aeee!!!!
 		}else {
-			return ResponseEntity.status(401).body("Email ou senha incorretos !!!!111 Se vira pra saber qual ");
+			return ResponseEntity.status(401).body("Email ou senha incorretos !!!! Se vira pra saber qual ");
 			//se for falso ele vai mostrar esse erro genéricão ae
 		}
 	}
